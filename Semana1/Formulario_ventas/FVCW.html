@@ -14,13 +14,13 @@
 
 
     <h3 style = "color: #ffc36a; text-align:center;  ">    <br>    Enchiladas disponible </h3>  
-    <table border="19" align="center"    style="border-collapse: collapse;" cellpadding=25% style="color: #ffc36a;" >
-    <thead>
-      <tr>
+    <table border="19" align="center"    style="border-collapse: collapse;" cellpadding=25%  >
+    <thead >
+      <tr style="background-color: rgb(235, 205, 163);">
 
-        <th><h5 style = "color:  blanchedalmond;"> Nombre</h5></th>
-        <th><h5 style = "color:  blanchedalmond;"> Foto</h5></th>
-        <th><h5 style = "color:  blanchedalmond;"> Costo</h5></th>
+        <th><h5 style = "color:  rgb(141, 85, 1);"> Nombre</h5></th>
+        <th><h5 style = "color:  rgb(141, 85, 1);"> Foto</h5></th>
+        <th><h5 style = "color:  rgb(141, 85, 1);"> Costo</h5></th>
       </tr>  
     </thead>
     <tbody>
@@ -59,33 +59,40 @@
                     <fieldset>
 
                         <legend>Informacion del pedido </legend>
-                        <label> 
-                            <input type="text" />
-                        </label> <br><br>
-                        <label> Nombre:
-                            <input type="text"/>
-                        </label> <br><br>
-
-                        <label> Nombre:
-                            <input type="text"/>
-                        </label> <br><br>
-
-                        <label> Nombre:
-                            <input type="text"/>
+                        <label for ="tipo" >Tipo de enchiladas
+                            <select id="tipo" required > Tipo de enchiladas
+                                <option  disabled > --seleciona una opcion--</option>
+                                <option value="1"> Enchiladas verdes rellenas de pollo con queso gratinado encima.</option>
+                                <option value="2"> Enchiladas rojas rellenas de queso fresco.</option>
+                                <option value="3"> Enchiladas verdes rellenas de queso panela.</option>
+                                <option value="4"> Enmoladas clasicas.</option>
+                            </select> <br><br>
+                        </label>Con picante? <br>
+                            <input type="radio" name="picante" required  value="1"/>SI
+                            <input type="radio" name="picante"  required value="2"/>NO
                         </label> <br><br>
 
-
-                        <label for ="apellido"> Apellido: 
-                            <input id="apellido" type="color"/>
+                        <label> Crema: <br>
+                            <input type="range" min=0 max=5  /> 0-5
                         </label> <br><br>
 
-                        <label for ="edad"> Edad: </label>
-                        <select id="edad"> Edad
-                            <option value="16"> 16</option>
-                            <option value="17"> 17</option>
-                            <option value="18"> 18</option>
-                        </select> <br><br>
-                        <color></color>
+                        <label> Cebolla: <br>
+                            <input type="range" min=0 max=5  /> 0-5
+                        </label> <br><br>
+
+                        <label> Queso: <br>
+                            <input type="range" min=0 max=5  /> 0-5
+                        </label> <br><br>
+
+                        <label> Cuantas: <br>
+                            <input  required  type="number" min="1" max="10" />
+                        </label> <br><br>
+
+                        
+                <button type="menu"> Agregar </button>
+
+
+                       
                    
                         
                 </fieldset>
@@ -93,39 +100,57 @@
 
                     <legend>>Informacion del cliente </legend>
                     <label> Nombre:
-                        <input type="text"/>
-                    </label> <br><br>
-                    <label> Nombre:
-                        <input type="text"/>
-                    </label> <br><br>
-
-                    <label> Nombre:
-                        <input type="text"/>
-                    </label> <br><br>
-
-                    <label> Nombre:
-                        <input type="text"/>
+                        <input type="text"   required  minlength="3" maxlength="40"/>
                     </label> <br><br>
 
 
-                    <label for ="apellido"> Apellido: 
-                        <input id="apellido" type="color"/>
+                    <label for="password"> Palabra segura: <br>
+                         <sub style="color: rgb(105, 105, 105);">   Opcionalmente puedes agregar esta opcion para evitar que el pedido sea entregado erroneamnte  </sub><br>
+                        <input  id="password" type="password" minlength="3" maxlength="15" />
                     </label> <br><br>
 
-                    <label for ="edad"> Edad: </label>
-                    <select id="edad"> Edad
-                        <option value="16"> 16</option>
-                        <option value="17"> 17</option>
-                        <option value="18"> 18</option>
-                    </select> <br><br>
-                    <color></color>
-             
+
+                    <label for="Correo"> Correo electronico: <br>
+                        <sub style="color: rgb(105, 105, 105);">   Opcionalemte puedes suscribirte para recibir ofertas especiales </sub><br>
+                        <input id="Correo" type="email"/>
+                    </label> <br><br>
+
+                    <label for ="Dirección"> Lugar de entrega </label>
+                          <textarea id="Dirección" required cols="100" rows="2" minlength="15"  placeholder="Escribe el lugar de entrega de tu preferencia (solo coyoacan)" ></textarea>
+
+                          <label> Telefono Celular:
+                            <input type="tel"  pattern = "5[0-9]{9}"  required maxlength="10"  minlength="10" placeholder="5512345678" />
+                        </label> <br><br>
              
                 </fieldset>
-                <p text-aling="center;"> <button> listo</button> </p> 
+                <button type="submit">  Listo</button>
+                
+                <button type="reset">  Borrar</button>
             </fieldset>
         </form>
 
     </body>
 
 </html>
+<!--
+
+2 
+3 
+4 
+5 
+6 
+
+
+ingradientes chekbutton
+
+
+
+
+
+
+
+
+
+
+
+-->
